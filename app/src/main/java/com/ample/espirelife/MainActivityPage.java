@@ -30,6 +30,9 @@ public class MainActivityPage extends Activity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webSettings.setDomStorageEnabled(true);
+        webSettings.setLoadsImagesAutomatically(true);
+        webSettings.setAppCacheEnabled(true);
+        webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
 
         webView.loadUrl("https://app.espirelife.in");
     }
